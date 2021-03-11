@@ -6,7 +6,6 @@ import { EditableRow } from './EditbaleRow';
 
 import {
   arrayMove,
-  SortableContainer,
   SortableElement,
   SortableHandle,
 } from 'react-sortable-hoc';
@@ -16,7 +15,6 @@ const DragHandle = SortableHandle(() => (
 ));
 
 const SortableItem = SortableElement((props) => <tr {...props} />);
-SortableContainer = SortableContainer((props) => <tr {...props} />);
 
 export default class EditableTable extends React.Component {
   constructor(props) {
@@ -101,15 +99,7 @@ export default class EditableTable extends React.Component {
     }
   };
 
-  DraggableContainer = (props) => {
-    <SortableContainer
-      useDragHandle
-      disableAutoscroll
-      helperClass="row-dragging"
-      onSortEnd={this.onSortEnd}
-      {...props}
-    />;
-  };
+ 
 
   DraggableBodyRow = ({ className, style, ...restProps }) => {
     const { dataSource } = this.state;
