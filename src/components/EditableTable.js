@@ -28,7 +28,7 @@ export default class EditableTable extends React.Component {
         width: '30%',
         editable: true,
         classNames: 'drag-visible',
-        render: () => <DragHandle />,``
+        render: () => <DragHandle />,
       },
       {
         title: '合同名称',
